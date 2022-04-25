@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { useToasts } from "react-toast-notifications";
 import AuthContext from "../context/AuthContext";
 
-
 const INITIAL_DATA = {
   title: "",
   createdOn: "",
@@ -28,7 +27,7 @@ const NotePage = () => {
     if (id === "new") return;
     let response = await fetch(`/get-Note/${id}`);
     let data = await response.json();
-    console.log(data);
+    // console.log(data);
     setNote(data.myNote);
   };
 
@@ -73,7 +72,7 @@ const NotePage = () => {
     })
       .then((response) => {
         if (response.ok) {
-          return response.json();
+          history("/");
         } else {
           throw new Error("Somthing went wrong!");
         }
@@ -101,8 +100,7 @@ const NotePage = () => {
     })
       .then((response) => {
         if (response.ok) {
-          
-          return response.json();
+          history("/");
         } else {
           throw new Error("Somthing went wrong!");
         }
@@ -119,7 +117,7 @@ const NotePage = () => {
           autoDismiss: true,
         });
       });
-      history('/');
+    history("/");
   };
 
   let handleSubmit = () => {
