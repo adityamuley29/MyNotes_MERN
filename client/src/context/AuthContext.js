@@ -67,8 +67,11 @@ export const AuthProvider = ({ children }) => {
     });
     let data = await response.json();
     let user = data.user
+    console.log(user);
     if (response.status === 200) {
-      setAuthToken(user.id);
+
+      try {
+        setAuthToken(user.id);
       setUser(user.id);
 
       localStorage.setItem("userId", JSON.stringify(user.id));
@@ -79,6 +82,10 @@ export const AuthProvider = ({ children }) => {
         autoDismiss: true,
       });
       history("/");
+      } catch (error) {
+        console.log(error.message);
+      }
+      
     } else {
       addToast(`Somthing went wrong`, {
         appearance: "error",

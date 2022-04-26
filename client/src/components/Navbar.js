@@ -19,7 +19,7 @@ const Navbar = (props) => {
 
   const userDetails = JSON.parse(localStorage.getItem("user"));
 
-  // console.log(JSON.parse(userDetails));
+  
   const triggerToggle = () => {
     setToggle(!toggle);
     toggleMode(toggle);
