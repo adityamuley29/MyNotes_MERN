@@ -54,7 +54,7 @@ const Navbar = (props) => {
         {user ? (
           <Fragment>
             <div className="auth-button">
-              <h3>Hello, {userDetails.username}</h3>
+              {/* <h3>Hello, {userDetails.username}</h3> */}
             </div>
             <div className="auth-button">
               <h3 id="logoutbtn">
