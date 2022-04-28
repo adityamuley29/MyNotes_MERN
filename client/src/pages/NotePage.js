@@ -25,14 +25,16 @@ const NotePage = () => {
 
   let getNote = async () => {
     if (id === "new") return;
-    let response = await fetch(`/get-Note/${id}`);
+    let response = await fetch(
+      `https://mynotes-aditya.herokuapp.com/api/get-Note/${id}`
+    );
     let data = await response.json();
     // console.log(data);
     setNote(data.myNote);
   };
 
   let createNote = async () => {
-    fetch(`/add-Note`, {
+    fetch(`https://mynotes-aditya.herokuapp.com/api/add-Note`, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -62,7 +64,7 @@ const NotePage = () => {
   };
 
   let updateNote = async () => {
-    fetch(`/update-Note/${id}/`, {
+    fetch(`https://mynotes-aditya.herokuapp.com/api/update-Note/${id}/`, {
       method: "PUT",
       headers: {
         Accept: "application/json",
@@ -91,7 +93,7 @@ const NotePage = () => {
       });
   };
   let deleteNote = async () => {
-    fetch(`/delete-Note/${id}`, {
+    fetch(`https://mynotes-aditya.herokuapp.com/api/delete-Note/${id}`, {
       method: "DELETE",
       headers: {
         Accept: "application/json",

@@ -18,7 +18,7 @@ const NotesListPage = () => {
   const getNotes = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`/get-Notes/${token}`, {
+      const response = await fetch(`https://mynotes-aditya.herokuapp.com/api/get-Notes/${token}`, {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

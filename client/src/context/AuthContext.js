@@ -20,7 +20,7 @@ export const AuthProvider = ({ children }) => {
 
   const registerUserHandeler = async (e) => {
     e.preventDefault();
-    const response = await fetch("/auth/register", {
+    const response = await fetch("https://mynotes-aditya.herokuapp.com/api/auth/register", {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -54,7 +54,7 @@ export const AuthProvider = ({ children }) => {
   let loginUser = async (e) => {
     e.preventDefault();
     console.log("form submitted");
-    let response = await fetch("/auth/login", {
+    let response = await fetch("https://mynotes-aditya.herokuapp.com/api/auth/login", {
       method: "POST",
       headers: {
         Accept: "application/json",
