@@ -1,6 +1,6 @@
 {
   "name": "mynotes",
-  "proxy": "https://mynotes-aditya.herokuapp.com/api/",
+  "proxy": "https://mynotes-aditya.herokuapp.com/api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
