@@ -34,9 +34,9 @@ const PORT = process.env.PORT || 8000;
 //   res.send("Welcome to api");
 // });
 
-app.use((req, res) => {
-  res.status(404).send({ status: 404, message: "Sorry cant't find that!" });
-});
+// app.use((req, res) => {
+//   res.status(404).send({ status: 404, message: "Sorry cant't find that!" });
+// });
 
 if(process.env.NODE_ENV == "production"){
   app.use(express.static("client/build"))
