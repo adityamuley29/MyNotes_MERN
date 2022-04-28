@@ -30,9 +30,9 @@ const PORT = process.env.PORT || 8000;
 
 // Routes
 
-app.get("/api", function (req, res) {
-  res.send("Welcome to api");
-});
+// app.get("/api", function (req, res) {
+//   res.send("Welcome to api");
+// });
 
 app.use((req, res) => {
   res.status(404).send({ status: 404, message: "Sorry cant't find that!" });
